@@ -12,4 +12,11 @@ export class MovieService {
 getMovies() {
    return fetch('api/GetMovieList').then(data => data.json());
 }
+
+async getCurrentUser() {
+  const response = await fetch('/.auth/me');
+  const payload = await response.json();
+  const { clientPrincipal } = payload;
+  return clientPrincipal;
+}
 }

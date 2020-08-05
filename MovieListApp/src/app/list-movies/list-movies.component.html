@@ -2,6 +2,10 @@
 
 <h1 style="text-align: center;">Movie List</h1>
 
+<div *ngIf="currentUser">
+    Current User: {{currentUser}} | &nbsp; <a href="/.auth/logout">Logout</a>
+</div>
+  
 
 
 <div class="container-fluid" style="max-width: 80%;">
