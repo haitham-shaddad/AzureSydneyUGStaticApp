@@ -1,0 +1,26 @@
+
+
+<h1 style="text-align: center;">Movie List</h1>
+
+
+
+<div class="container-fluid" style="max-width: 80%;">
+    <div class="row">
+        <div class="card col-md-3" style="width: 18rem;text-align: center;" *ngFor="let movie of movies">
+            <img class="card-img-top" src="{{movie.poster}}" alt="{{movie.plot}}">
+            <div class="card-body">
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p class="card-text">{{movie.plot}}</p>
+                <div>
+                    <span class="badge badge-primary">{{movie.year}}</span>- <span
+                        class="badge badge-secondary">{{movie.rated}}</span>
+                </div>
+                <div class="center-block">
+
+                    <span class="badge badge-warning">IMDB {{movie.imdb.rating}}/10</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
